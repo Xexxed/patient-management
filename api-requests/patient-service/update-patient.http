@@ -5,9 +5,9 @@ Content-Type: application/json
 
 {
 
-  "name": "John Doe",
-  "email": "john.doe1238765@example.com",
+  "name": "John Doe565",
+  "email": "john.do238765@example.com",
   "address": "123 Main St, Springfield",
-  "dateOfBirth": "1985-06-15",
-  "registeredDate": "2024-01-10"
+  "dateOfBirth": "1985-06-15"
+
 }

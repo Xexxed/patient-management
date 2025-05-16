@@ -11,11 +11,30 @@ spring:
             - Path=/api/patients/**
           filters:
             - StripPrefix=1
+            - JwtValidation
 
         - id: api-docs-patient-route
-          uri: http://patient-serive:4000
+          uri: http://patient-service:4000
           predicates:
             - Path=/api-docs/patient/
           filters:
-            - RewritePth=/api-docs/patient/, /v3/api-docs
+            - RewritePath=/api-docs/patient/, /v3/api-docs
+
+        - id: api-docs-auth-route
+          uri: http://patient-auth-service:4005
+          predicates:
+            - Path=/api-docs/auth/
+          filters:
+            - RewritePath=/api-docs/auth/, /v3/api-docs
+
+        - id: patient-auth-route
+          uri: http://patient-auth-service:4005
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+
+
+
 
